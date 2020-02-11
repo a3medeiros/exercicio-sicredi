@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "5202a071-df5d-4557-9e7d-7d881d650053",
+		"name": "Sicredi Teste - Anderson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Testes GET API",
+			"item": [
+				{
+					"name": "http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "eae0cb09-bfbf-4d08-bbbb-f8475d63af0f",
+								"exec": [
+									"pm.test(\"Status code é 200 ao realizar a Simulação Sicredi\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Tempo de resposta é menor que 200ms ao realizar a Simulação Sicredi\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://5b847b30db24a100142dce1b.mockapi.io/api/v1/simulador",
+							"protocol": "http",
+							"host": [
+								"5b847b30db24a100142dce1b",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"simulador"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
